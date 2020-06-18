@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 	    libxpm-dev \
 	    zlib1g-dev \
 	    libfreetype6-dev \
-      libmcrypt-dev \
+	    libmcrypt-dev \
 	    libxml2-dev \
 	    libexpat1-dev \
 	    libbz2-dev \
@@ -26,15 +26,15 @@ RUN apt-get update && apt-get install -y \
 	    libpcre3-dev \
 	    libtidy-dev \
 	    software-properties-common \
-      libzip-dev \
+	    libzip-dev \
 	    zip unzip \
 	    ntfs-3g \
 	    cifs-utils \
-      libonig-dev \
+	    libonig-dev \
 	    gnupg -y
 
 # Install php extensions
-RUN docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2 opcach soap tidy bcmath \
+RUN docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2 opcach soap tidy bcmath
 
 # Install & enable Xdebug for code coverage reports
 RUN pecl install xdebug \
